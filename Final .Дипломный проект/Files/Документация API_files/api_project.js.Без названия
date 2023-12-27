@@ -1,0 +1,21 @@
+define({
+  "name": "Ez-scooter",
+  "version": "1.0.0",
+  "description": "",
+  "title": "Ez-scooter",
+  "url": "/api",
+  "template": {
+    "withCompare": true,
+    "withGenerator": false
+  },
+  "order": [],
+  "sampleUrl": false,
+  "defaultVersion": "0.0.0",
+  "apidoc": "0.3.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2023-06-14T09:11:16.863Z",
+    "url": "http://apidocjs.com",
+    "version": "0.23.0"
+  }
+});

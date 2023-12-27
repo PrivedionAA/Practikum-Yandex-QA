@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/ -->
+<html data-lt-installed="true" class="wf-sourcecodepro-n4-active wf-sourcesanspro-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ez-scooter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="./Документация API_files/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="./Документация API_files/prettify.css" rel="stylesheet" media="screen">
+  <link href="./Документация API_files/style.css" rel="stylesheet" media="screen, print">
+  <link href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/img/favicon.ico" rel="icon" type="image/x-icon">
+  <script src="./Документация API_files/polyfill.js.Без названия"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="./Документация API_files/main.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./Документация API_files/jquery.min.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lodash" src="./Документация API_files/lodash.custom.min.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales" src="./Документация API_files/locale.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="apiProject" src="./Документация API_files/api_project.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="apiData" src="./Документация API_files/api_data.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utilsSampleRequest" src="./Документация API_files/send_sample_request.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="semver" src="./Документация API_files/semver.min.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="webfontloader" src="./Документация API_files/webfontloader.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pathToRegexp" src="./Документация API_files/index.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="list" src="./Документация API_files/list.min.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="prettify" src="./Документация API_files/prettify.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="handlebars" src="./Документация API_files/handlebars.min.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/ca.js" src="./Документация API_files/ca.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/cs.js" src="./Документация API_files/cs.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/de.js" src="./Документация API_files/de.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/es.js" src="./Документация API_files/es.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/fr.js" src="./Документация API_files/fr.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/it.js" src="./Документация API_files/it.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/nl.js" src="./Документация API_files/nl.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/pl.js" src="./Документация API_files/pl.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/pt_br.js" src="./Документация API_files/pt_br.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/ro.js" src="./Документация API_files/ro.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/ru.js" src="./Документация API_files/ru.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/tr.js" src="./Документация API_files/tr.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/vi.js" src="./Документация API_files/vi.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/zh.js" src="./Документация API_files/zh.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/zh_cn.js" src="./Документация API_files/zh_cn.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap" src="./Документация API_files/bootstrap.min.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/send_sample_request_utils" src="./Документация API_files/send_sample_request_utils.js.Без названия"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="handlebarsExtended" src="./Документация API_files/handlebars_helper.js.Без названия"></script><link rel="stylesheet" href="./Документация API_files/css" media="all"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="diffMatchPatch" src="./Документация API_files/diff_match_patch.min.js.Без названия"></script></head>
+<body class="container-fluid">
+
+<script id="template-sidenav" type="text/x-handlebars-template">
+<nav id="scrollingNav">
+  <div class="sidenav-search">
+    <input class="form-control search" type="text" placeholder="{{__ "Filter..."}}">
+    <span class="search-reset">x</span>
+  </div>
+  <ul class="sidenav nav nav-list list">
+  {{#each nav}}
+    {{#if title}}
+      {{#if isHeader}}
+        {{#if isFixed}}
+          <li class="nav-fixed nav-header navbar-btn nav-list-item" data-group="{{group}}"><a href="#api-{{group}}" data-name="show-api-{{group}}" class="show-api api-{{group}}-init">{{underscoreToSpace title}}</a></li>
+        {{else}}
+          <li class="nav-header nav-list-item" data-group="{{group}}"><a href="#api-{{group}}" data-group="show-api-{{group}}" class="show-group api-{{group}}-init">{{underscoreToSpace title}}</a></li>
+        {{/if}}
+      {{else}}
+        <li class="{{#if hidden}}hide {{/if}}" data-group="{{group}}" data-name="{{name}}" data-version="{{version}}">
+          <a href="#api-{{group}}-{{name}}" title="{{url}}" data-group="show-api-{{group}}" data-name="show-api-{{group}}-{{name}}" class="nav-list-item show-api api-{{group}}-{{name}}-init">{{title}}<div class="nav-list-url-item hide">{{url}}</div></a>
+        </li>
+      {{/if}}
+    {{/if}}
+  {{/each}}
+  </ul>
+</nav>
+</script>
+
+<script id="template-project" type="text/x-handlebars-template">
+  <div class="pull-left">
+    <h1>{{name}}</h1>
+    {{#if description}}<h2>{{{nl2br description}}}</h2>{{/if}}
+  </div>
+  <div class="pull-right">
+    {{#if template.withCompare}}
+    <div class="btn-group">
+      <button id="version" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
+        <strong>{{version}}</strong>&nbsp;<span class="caret"></span>
+      </button>
+      <ul id="versions" class="dropdown-menu open-left">
+        <li><a id="compareAllWithPredecessor" href="#">{{__ "Compare all with predecessor"}}</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">{{__ "show up to version:"}}</a></li>
+      {{#each versions}}
+        <li class="version"><a href="#">{{this}}</a></li>
+      {{/each}}
+      </ul>
+    </div>
+    {{else}}
+    <div id="version" class="well well-sm">
+      <strong>{{version}}</strong>
+    </div>
+    {{/if}}
+  </div>
+  <div class="clearfix"></div>
+</script>
+
+<script id="template-header" type="text/x-handlebars-template">
+  {{#if content}}
+    <div id="api-_" class="show-api-article show-api-_-article">{{{content}}}</div>
+  {{/if}}
+</script>
+
+<script id="template-footer" type="text/x-handlebars-template">
+  {{#if content}}
+    <div id="api-_footer" class="show-api-article show-api-_-article">{{{content}}}</div>
+  {{/if}}
+</script>
+
+<script id="template-generator" type="text/x-handlebars-template">
+  {{#if template.withGenerator}}
+    {{#if generator}}
+      <div class="content">
+        {{__ "Generated with"}} <a href="{{{generator.url}}}">{{{generator.name}}}</a> {{{generator.version}}} - {{{generator.time}}}
+      </div>
+    {{/if}}
+  {{/if}}
+</script>
+
+<script id="template-sections" type="text/x-handlebars-template">
+  <section id="api-{{group}}" class="show-api-group show-api-{{group}}-group {{#if aloneDisplay}} hide{{/if}}">
+    <h1>{{underscoreToSpace title}}</h1>
+    {{#if description}}
+      <p>{{{nl2br description}}}</p>
+    {{/if}}
+    {{#each articles}}
+      <div id="api-{{group}}-{{name}}" class="show-api-article show-api-{{group}}-article show-api-{{group}}-{{name}}-article {{#if aloneDisplay}} hide{{/if}}">
+        {{{article}}}
+      </div>
+    {{/each}}
+  </section>
+</script>
+
+<script id="template-article" type="text/x-handlebars-template">
+  <article id="api-{{article.group}}-{{article.name}}-{{article.version}}" {{#if hidden}}class="hide"{{/if}} data-group="{{article.group}}" data-name="{{article.name}}" data-version="{{article.version}}">
+    <div class="pull-left">
+      <h1>{{underscoreToSpace article.groupTitle}}{{#if article.title}} - {{article.title}}{{/if}}</h1>
+    </div>
+    {{#if template.withCompare}}
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>{{article.version}}</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">{{__ "compare changes to:"}}</a></li>
+        {{#each versions}}
+          <li class="version"><a href="#">{{this}}</a></li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
+    {{/if}}
+    <div class="clearfix"></div>
+
+    {{#if article.author}}<h4 class="muted">Authored by: {{article.author}}</h4>{{/if}}
+
+    {{#if article.deprecated}}
+      <p class="deprecated"><span>{{__ "DEPRECATED"}}</span>
+        {{{markdown article.deprecated.content}}}
+      </p>
+    {{/if}}
+
+    {{#if article.description}}
+      <p>{{{nl2br article.description}}}</p>
+    {{/if}}
+    <span class="type type__{{toLowerCase article.type}}">{{toLowerCase article.type}}</span>
+    <pre class="prettyprint language-html" data-type="{{toLowerCase article.type}}"><code>{{article.url}}</code></pre>
+
+    {{#if article.permission}}
+      <p>
+        {{__ "Permission:"}}
+        {{#each article.permission}}
+          {{name}}
+          {{#if title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{title}}" data-content="{{nl2br description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+              <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{/if}}
+        {{/each}}
+      </p>
+    {{/if}}
+
+    {{#if_gt article.examples.length compare=0}}
+      <ul class="nav nav-tabs nav-tabs-examples">
+        {{#each article.examples}}
+          <li{{#if_eq @index compare=0}} class="active"{{/if_eq}}>
+            <a href="#examples-{{../id}}-{{@index}}">{{title}}</a>
+          </li>
+        {{/each}}
+      </ul>
+
+      <div class="tab-content">
+      {{#each article.examples}}
+        <div class="tab-pane{{#if_eq @index compare=0}} active{{/if_eq}}" id="examples-{{../id}}-{{@index}}">
+          <pre class="prettyprint language-{{type}}" data-type="{{type}}"><code>{{content}}</code></pre>
+        </div>
+      {{/each}}
+      </div>
+    {{/if_gt}}
+
+    {{subTemplate "article-param-block" params=article.header _hasType=_hasTypeInHeaderFields section="header"}}
+    {{subTemplate "article-param-block" params=article.parameter _hasType=_hasTypeInParameterFields section="parameter"}}
+    {{subTemplate "article-param-block" params=article.success _hasType=_hasTypeInSuccessFields section="success"}}
+    {{subTemplate "article-param-block" params=article.error _col1="Name" _hasType=_hasTypeInErrorFields section="error"}}
+
+    {{subTemplate "article-sample-request" article=article id=id}}
+  </article>
+</script>
+
+<script id="template-article-param-block" type="text/x-handlebars-template">
+  {{#if params}}
+    {{#each params.fields}}
+      <h2>{{__ @key}}</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">{{#if ../_col1}}{{__ ../_col1}}{{else}}{{__ "Field"}}{{/if}}</th>
+            {{#if ../_hasType}}<th style="width: 10%">{{__ "Type"}}</th>{{/if}}
+            <th style="width: {{#if ../_hasType}}60%{{else}}70%{{/if}}">{{__ "Description"}}</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each this}}
+          <tr>
+            <td class="code">{{{splitFill field "." "&nbsp;&nbsp;"}}}{{#if optional}} <span class="label label-optional">{{__ "optional"}}</span>{{/if}}</td>
+            {{#if ../../_hasType}}
+              <td>
+                {{{type}}}
+              </td>
+            {{/if}}
+            <td>
+            {{{nl2br description}}}
+            {{#if defaultValue}}<p class="default-value">{{__ "Default value:"}} <code>{{{defaultValue}}}</code></p>{{/if}}
+            {{#if size}}<p class="type-size">{{__ "Size range:"}} <code>{{{size}}}</code></p>{{/if}}
+            {{#if allowedValues}}<p class="type-size">{{__ "Allowed values:"}}
+              {{#each allowedValues}}
+                <code>{{{this}}}</code>{{#unless @last}}, {{/unless}}
+              {{/each}}
+              </p>
+            {{/if}}
+            </td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    {{/each}}
+    {{#if_gt params.examples.length compare=0}}
+      <ul class="nav nav-tabs nav-tabs-examples">
+      {{#each params.examples}}
+        <li{{#if_eq @index compare=0}} class="active"{{/if_eq}}>
+          <a href="#{{../section}}-examples-{{../id}}-{{@index}}">{{title}}</a>
+        </li>
+      {{/each}}
+      </ul>
+
+      <div class="tab-content">
+      {{#each params.examples}}
+        <div class="tab-pane{{#if_eq @index compare=0}} active{{/if_eq}}" id="{{../section}}-examples-{{../id}}-{{@index}}">
+        <pre class="prettyprint language-{{type}}" data-type="{{type}}"><code>{{reformat content type}}</code></pre>
+        </div>
+      {{/each}}
+      </div>
+    {{/if_gt}}
+  {{/if}}
+</script>
+
+<script id="template-article-sample-request" type="text/x-handlebars-template">
+    {{#if article.sampleRequest}}
+      <h2>{{__ "Send a Sample Request"}}</h2>
+      <form class="form-horizontal">
+        <fieldset>
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="{{../id}}-sample-request-url"></label>
+              <div class="input-group">
+                <input id="{{../id}}-sample-request-url" type="text" class="form-control sample-request-url" value="{{article.sampleRequest.0.url}}" />
+                <span class="input-group-addon">{{__ "url"}}</span>
+              </div>
+            </div>
+
+      {{#if article.header}}
+        {{#if article.header.fields}}
+          <h3>{{__ "Headers"}}</h3>
+          {{#each article.header.fields}}
+            <h4><input type="checkbox" data-sample-request-header-group-id="sample-request-header-{{@index}}" name="{{../id}}-sample-request-header" value="{{@index}}" class="sample-request-header sample-request-switch" checked />{{__ @key}}</h4>
+            <div class="{{../id}}-sample-request-header-fields">
+              {{#each this}}
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="sample-request-header-field-{{field}}">{{field}}</label>
+                <div class="input-group">
+                  <input type="text" placeholder="{{field}}" value="{{defaultValue}}" id="sample-request-header-field-{{field}}" class="form-control sample-request-header" data-sample-request-header-name="{{field}}" data-sample-request-header-group="sample-request-header-{{@../index}}">
+                  <span class="input-group-addon">{{{type}}}</span>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          {{/each}}
+        {{/if}}
+      {{/if}}
+
+      {{#if article.parameter}}
+        {{#if article.parameter.fields}}
+          <h3>{{__ "Parameters"}}</h3>
+          {{#each article.parameter.fields}}
+            <h4><input type="checkbox" data-sample-request-param-group-id="sample-request-param-{{@index}}"  name="{{../id}}-sample-request-param" value="{{@index}}" class="sample-request-param sample-request-switch" checked/>{{__ @key}}
+              <select   name="{{../id}}-sample-header-content-type" class="{{../id}}-sample-request-param-select sample-header-content-type sample-header-content-type-switch">
+                <option value="undefined"  selected>ajax-auto</option>
+                <option value="body-json" >body/json</option>
+                <option value="body-form-data" >body/form-data</option>
+              </select>
+            </h4>
+            <div class="{{../id}}-sample-request-param-body {{../id}}-sample-header-content-type-body hide">
+              <div class="form-group">
+                <div class="input-group">
+                  <textarea id="sample-request-body-json" class="form-control sample-request-body" data-sample-request-body-group="sample-request-param-{{@./index}}" rows="6" style="OVERFLOW: visible" {{#if optional}}data-sample-request-param-optional="true"{{/if}}></textarea>
+                  <div class="input-group-addon">json</div>
+                </div>
+              </div>
+            </div>
+            <div class="{{../id}}-sample-request-param-fields {{../id}}-sample-header-content-type-fields">
+              {{#each this}}
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="sample-request-param-field-{{field}}">{{field}}</label>
+                <div class="input-group">
+                  <input id="sample-request-param-field-{{field}}" type="{{setInputType type}}" placeholder="{{field}}" class="form-control sample-request-param" data-sample-request-param-name="{{field}}" data-sample-request-param-group="sample-request-param-{{@../index}}" {{#if optional}}data-sample-request-param-optional="true"{{/if}}>
+                  <div class="input-group-addon">{{{type}}}</div>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          {{/each}}
+        {{/if}}
+      {{/if}}
+
+          <div class="form-group">
+            <div class="controls pull-right">
+              <button class="btn btn-primary sample-request-send" data-sample-request-type="{{article.type}}">{{__ "Send"}}</button>
+            </div>
+          </div>
+          <div class="form-group sample-request-response" style="display: none;">
+            <h3>
+              {{__ "Response"}}
+              <button class="btn btn-default btn-xs pull-right sample-request-clear">X</button>
+            </h3>
+            <pre class="prettyprint language-json" data-type="json"><code class="sample-request-response-json"></code></pre>
+          </div>
+        </fieldset>
+      </form>
+    {{/if}}
+</script>
+
+<script id="template-compare-article" type="text/x-handlebars-template">
+  <article id="api-{{article.group}}-{{article.name}}-{{article.version}}" {{#if hidden}}class="hide"{{/if}} data-group="{{article.group}}" data-name="{{article.name}}" data-version="{{article.version}}" data-compare-version="{{compare.version}}">
+    <div class="pull-left">
+      <h1>{{underscoreToSpace article.group}} - {{{showDiff article.title compare.title}}}</h1>
+    </div>
+
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="btn btn-success" disabled>
+          <strong>{{article.version}}</strong> {{__ "compared to"}}
+        </button>
+        <button class="version btn btn-danger dropdown-toggle" data-toggle="dropdown">
+          <strong>{{compare.version}}</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="#">{{__ "compare changes to:"}}</a></li>
+          <li class="divider"></li>
+        {{#each versions}}
+          <li class="version"><a href="#">{{this}}</a></li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    {{#if article.description}}
+      <p>{{{showDiff article.description compare.description "nl2br"}}}</p>
+    {{else}}
+      {{#if compare.description}}
+      <p>{{{showDiff "" compare.description "nl2br"}}}</p>
+      {{/if}}
+    {{/if}}
+
+    <pre class="prettyprint language-html" data-type="{{toLowerCase article.type}}"><code>{{{showDiff article.url compare.url}}}</code></pre>
+
+    {{subTemplate "article-compare-permission" article=article compare=compare}}
+
+    <ul class="nav nav-tabs nav-tabs-examples">
+    {{#each_compare_title article.examples compare.examples}}
+      {{#if typeSame}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#compare-examples-{{../../article.id}}-{{index}}">{{{showDiff source.title compare.title}}}</a>
+        </li>
+      {{/if}}
+
+      {{#if typeIns}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#compare-examples-{{../../article.id}}-{{index}}"><ins>{{{source.title}}}</ins></a>
+        </li>
+      {{/if}}
+
+      {{#if typeDel}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#compare-examples-{{../../article.id}}-{{index}}"><del>{{{compare.title}}}</del></a>
+        </li>
+      {{/if}}
+    {{/each_compare_title}}
+    </ul>
+
+    <div class="tab-content">
+    {{#each_compare_title article.examples compare.examples}}
+
+      {{#if typeSame}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{source.type}}"><code>{{{showDiff source.content compare.content}}}</code></pre>
+        </div>
+      {{/if}}
+
+      {{#if typeIns}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{source.type}}"><code>{{{source.content}}}</code></pre>
+        </div>
+      {{/if}}
+
+      {{#if typeDel}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{compare.type}}"><code>{{{compare.content}}}</code></pre>
+        </div>
+      {{/if}}
+
+    {{/each_compare_title}}
+    </div>
+
+    {{subTemplate "article-compare-param-block" source=article.parameter compare=compare.parameter _hasType=_hasTypeInParameterFields section="parameter"}}
+    {{subTemplate "article-compare-param-block" source=article.success compare=compare.success _hasType=_hasTypeInSuccessFields section="success"}}
+    {{subTemplate "article-compare-param-block" source=article.error compare=compare.error _col1="Name" _hasType=_hasTypeInErrorFields section="error"}}
+
+    {{subTemplate "article-sample-request" article=article id=id}}
+
+  </article>
+</script>
+
+<script id="template-article-compare-permission" type="text/x-handlebars-template">
+  <p>
+  {{__ "Permission:"}}
+  {{#each_compare_list_field article.permission compare.permission field="name"}}
+    {{#if source}}
+      {{#if typeSame}}
+        {{source.name}}
+        {{#if source.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{source.title}}" data-content="{{nl2br source.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+
+      {{#if typeIns}}
+        <ins>{{source.name}}</ins>
+        {{#if source.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{source.title}}" data-content="{{nl2br source.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+
+      {{#if typeDel}}
+        <del>{{source.name}}</del>
+        {{#if source.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{source.title}}" data-content="{{nl2br source.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+    {{else}}
+      {{#if typeSame}}
+        {{compare.name}}
+        {{#if compare.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{compare.title}}" data-content="{{nl2br compare.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+
+      {{#if typeIns}}
+        <ins>{{compare.name}}</ins>
+        {{#if compare.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{compare.title}}" data-content="{{nl2br compare.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+
+      {{#if typeDel}}
+        <del>{{compare.name}}</del>
+        {{#if compare.title}}
+          <button type="button" class="btn btn-info btn-xs" data-title="{{compare.title}}" data-content="{{nl2br compare.description}}" data-html="true" data-toggle="popover" data-placement="right" data-trigger="hover">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          </button>
+          {{#unless _last}}, {{/unless}}
+        {{/if}}
+      {{/if}}
+    {{/if}}
+  {{/each_compare_list_field}}
+  </p>
+</script>
+
+<script id="template-article-compare-param-block" type="text/x-handlebars-template">
+  {{#if source}}
+    {{#each_compare_keys source.fields compare.fields}}
+      {{#if typeSame}}
+        <h2>{{__ source.key}}</h2>
+        <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">{{#if ../_col1}}{{__ ../_col1}}{{else}}{{__ "Field"}}{{/if}}</th>
+            {{#if ../_hasType}}<th style="width: 10%">{{__ "Type"}}</th>{{/if}}
+            <th style="width: {{#if ../_hasType}}60%{{else}}70%{{/if}}">{{__ "Description"}}</th>
+          </tr>
+        </thead>
+        {{subTemplate "article-compare-param-block-body" source=source.value compare=compare.value _hasType=../_hasType}}
+        </table>
+      {{/if}}
+
+      {{#if typeIns}}
+        <h2><ins>{{__ source.key}}</ins></h2>
+        <table class="ins">
+        <thead>
+          <tr>
+            <th style="width: 30%">{{#if ../_col1}}{{__ ../_col1}}{{else}}{{__ "Field"}}{{/if}}</th>
+            {{#if ../_hasType}}<th style="width: 10%">{{__ "Type"}}</th>{{/if}}
+            <th style="width: {{#if ../_hasType}}60%{{else}}70%{{/if}}">{{__ "Description"}}</th>
+          </tr>
+        </thead>
+        {{subTemplate "article-compare-param-block-body" source=source.value compare=source.value _hasType=../_hasType}}
+        </table>
+      {{/if}}
+
+      {{#if typeDel}}
+        <h2><del>{{__ compare.key}}</del></h2>
+        <table class="del">
+        <thead>
+          <tr>
+            <th style="width: 30%">{{#if ../_col1}}{{__ ../_col1}}{{else}}{{__ "Field"}}{{/if}}</th>
+            {{#if ../_hasType}}<th style="width: 10%">{{__ "Type"}}</th>{{/if}}
+            <th style="width: {{#if ../_hasType}}60%{{else}}70%{{/if}}">{{__ "Description"}}</th>
+          </tr>
+        </thead>
+        {{subTemplate "article-compare-param-block-body" source=compare.value compare=compare.value _hasType=../_hasType}}
+        </table>
+      {{/if}}
+    {{/each_compare_keys}}
+
+    {{#if source.examples}}
+    <ul class="nav nav-tabs nav-tabs-examples">
+    {{#each_compare_title source.examples compare.examples}}
+      {{#if typeSame}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#{{../../section}}-compare-examples-{{../../article.id}}-{{index}}">{{{showDiff source.title compare.title}}}</a>
+        </li>
+      {{/if}}
+
+      {{#if typeIns}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#{{../../section}}-compare-examples-{{../../article.id}}-{{index}}"><ins>{{{source.title}}}</ins></a>
+        </li>
+      {{/if}}
+
+      {{#if typeDel}}
+        <li{{#if_eq index compare=0}} class="active"{{/if_eq}}>
+          <a href="#{{../../section}}-compare-examples-{{../../article.id}}-{{index}}"><del>{{{compare.title}}}</del></a>
+        </li>
+      {{/if}}
+    {{/each_compare_title}}
+    </ul>
+
+    <div class="tab-content">
+    {{#each_compare_title source.examples compare.examples}}
+
+      {{#if typeSame}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="{{../../section}}-compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{source.type}}"><code>{{{showDiff source.content compare.content}}}</code></pre>
+        </div>
+      {{/if}}
+
+      {{#if typeIns}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="{{../../section}}-compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{source.type}}"><code>{{{source.content}}}</code></pre>
+        </div>
+      {{/if}}
+
+      {{#if typeDel}}
+        <div class="tab-pane{{#if_eq index compare=0}} active{{/if_eq}}" id="{{../../section}}-compare-examples-{{../../article.id}}-{{index}}">
+          <pre class="prettyprint language-{{source.type}}" data-type="{{compare.type}}"><code>{{{compare.content}}}</code></pre>
+        </div>
+      {{/if}}
+    {{/each_compare_title}}
+    </div>
+    {{/if}}
+  {{/if}}
+</script>
+
+<script id="template-article-compare-param-block-body" type="text/x-handlebars-template">
+  <tbody>
+    {{#each_compare_field source compare}}
+      {{#if typeSame}}
+        <tr>
+          <td class="code">
+            {{{splitFill source.field "." "&nbsp;&nbsp;"}}}
+            {{#if source.optional}}
+              {{#if compare.optional}} <span class="label label-optional">{{__ "optional"}}</span>
+              {{else}} <span class="label label-optional label-ins">{{__ "optional"}}</span>
+              {{/if}}
+            {{else}}
+              {{#if compare.optional}} <span class="label label-optional label-del">{{__ "optional"}}</span>{{/if}}
+            {{/if}}
+          </td>
+
+        {{#if source.type}}
+          {{#if compare.type}}
+          <td>{{{showDiff source.type compare.type}}}</td>
+          {{else}}
+          <td>{{{source.type}}}</td>
+          {{/if}}
+        {{else}}
+          {{#if compare.type}}
+          <td>{{{compare.type}}}</td>
+          {{else}}
+            {{#if ../../../../_hasType}}<td></td>{{/if}}
+          {{/if}}
+        {{/if}}
+          <td>
+            {{{showDiff source.description compare.description "nl2br"}}}
+            {{#if source.defaultValue}}<p class="default-value">{{__ "Default value:"}} <code>{{{showDiff source.defaultValue compare.defaultValue}}}</code><p>{{/if}}
+          </td>
+        </tr>
+      {{/if}}
+
+      {{#if typeIns}}
+        <tr class="ins">
+          <td class="code">
+            {{{splitFill source.field "." "&nbsp;&nbsp;"}}}
+            {{#if source.optional}} <span class="label label-optional label-ins">{{__ "optional"}}</span>{{/if}}
+          </td>
+
+        {{#if source.type}}
+          <td>{{{source.type}}}</td>
+        {{else}}
+          {{{typRowTd}}}
+        {{/if}}
+
+          <td>
+            {{{nl2br source.description}}}
+            {{#if source.defaultValue}}<p class="default-value">{{__ "Default value:"}} <code>{{{source.defaultValue}}}</code><p>{{/if}}
+          </td>
+        </tr>
+      {{/if}}
+
+      {{#if typeDel}}
+        <tr class="del">
+          <td class="code">
+            {{{splitFill compare.field "." "&nbsp;&nbsp;"}}}
+            {{#if compare.optional}} <span class="label label-optional label-del">{{__ "optional"}}</span>{{/if}}
+          </td>
+
+        {{#if compare.type}}
+          <td>{{{compare.type}}}</td>
+        {{else}}
+          {{{typRowTd}}}
+        {{/if}}
+
+          <td>
+            {{{nl2br compare.description}}}
+            {{#if compare.defaultValue}}<p class="default-value">{{__ "Default value:"}} <code>{{{compare.defaultValue}}}</code><p>{{/if}}
+          </td>
+        </tr>
+      {{/if}}
+
+    {{/each_compare_field}}
+  </tbody>
+</script>
+
+<div class="container-fluid">
+  <div class="row">
+    <div id="sidenav" class="span2">
+<nav id="scrollingNav">
+  <div class="sidenav-search">
+    <input class="form-control search" type="text" placeholder="Filter...">
+    <span class="search-reset">x</span>
+  </div>
+  <ul class="sidenav nav nav-list list"><li class="nav-header nav-list-item" data-group="Courier"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Courier" data-group="show-api-Courier" class="show-group api-Courier-init">Courier</a></li><li class="is-new" data-group="Courier" data-name="Login" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Courier-Login" title="/v1/courier/login" data-group="show-api-Courier" data-name="show-api-Courier-Login" class="nav-list-item show-api api-Courier-Login-init">Логин курьера в системе<div class="nav-list-url-item hide">/v1/courier/login</div></a>
+        </li><li class="is-new" data-group="Courier" data-name="CreateCourier" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Courier-CreateCourier" title="/v1/courier" data-group="show-api-Courier" data-name="show-api-Courier-CreateCourier" class="nav-list-item show-api api-Courier-CreateCourier-init">Создание курьера<div class="nav-list-url-item hide">/v1/courier</div></a>
+        </li><li class="is-new" data-group="Courier" data-name="DeleteCourier" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Courier-DeleteCourier" title="/v1/courier/:id" data-group="show-api-Courier" data-name="show-api-Courier-DeleteCourier" class="nav-list-item show-api api-Courier-DeleteCourier-init">Удаление курьера<div class="nav-list-url-item hide">/v1/courier/:id</div></a>
+        </li><li class="nav-header nav-list-item" data-group="Couriers"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Couriers" data-group="show-api-Couriers" class="show-group api-Couriers-init">Couriers</a></li><li class="is-new" data-group="Couriers" data-name="GetOrdersCountByCourierId" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Couriers-GetOrdersCountByCourierId" title="/v1/courier/:id/ordersCount" data-group="show-api-Couriers" data-name="show-api-Couriers-GetOrdersCountByCourierId" class="nav-list-item show-api api-Couriers-GetOrdersCountByCourierId-init">Получить количество заказов курьера<div class="nav-list-url-item hide">/v1/courier/:id/ordersCount</div></a>
+        </li><li class="nav-header nav-list-item" data-group="Orders"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Orders" data-group="show-api-Orders" class="show-group api-Orders-init">Orders</a></li><li class="is-new" data-group="Orders" data-name="FinishOrder" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Orders-FinishOrder" title="/v1/orders/finish/:id" data-group="show-api-Orders" data-name="show-api-Orders-FinishOrder" class="nav-list-item show-api api-Orders-FinishOrder-init">Завершить заказ<div class="nav-list-url-item hide">/v1/orders/finish/:id</div></a>
+        </li><li class="is-new" data-group="Orders" data-name="CancelOrder" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Orders-CancelOrder" title="/v1/orders/cancel" data-group="show-api-Orders" data-name="show-api-Orders-CancelOrder" class="nav-list-item show-api api-Orders-CancelOrder-init">Отменить заказ<div class="nav-list-url-item hide">/v1/orders/cancel</div></a>
+        </li><li class="is-new" data-group="Orders" data-name="GetOrdersPageByPage" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Orders-GetOrdersPageByPage" title="/v1/orders" data-group="show-api-Orders" data-name="show-api-Orders-GetOrdersPageByPage" class="nav-list-item show-api api-Orders-GetOrdersPageByPage-init">Получение списка заказов.<div class="nav-list-url-item hide">/v1/orders</div></a>
+        </li><li class="is-new" data-group="Orders" data-name="GetOrderByTrackNumber" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Orders-GetOrderByTrackNumber" title="/v1/orders/track" data-group="show-api-Orders" data-name="show-api-Orders-GetOrderByTrackNumber" class="nav-list-item show-api api-Orders-GetOrderByTrackNumber-init">Получить заказ по его номеру<div class="nav-list-url-item hide">/v1/orders/track</div></a>
+        </li><li class="is-new" data-group="Orders" data-name="AcceptOrder" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Orders-AcceptOrder" title="/v1/orders/accept/:id" data-group="show-api-Orders" data-name="show-api-Orders-AcceptOrder" class="nav-list-item show-api api-Orders-AcceptOrder-init">Принять заказ<div class="nav-list-url-item hide">/v1/orders/accept/:id</div></a>
+        </li><li class="is-new" data-group="Orders" data-name="CreateOrder" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Orders-CreateOrder" title="/v1/orders" data-group="show-api-Orders" data-name="show-api-Orders-CreateOrder" class="nav-list-item show-api api-Orders-CreateOrder-init">Создание заказа<div class="nav-list-url-item hide">/v1/orders</div></a>
+        </li><li class="nav-header nav-list-item" data-group="Utils"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Utils" data-group="show-api-Utils" class="show-group api-Utils-init">Utils</a></li><li class="is-new" data-group="Utils" data-name="PingServer" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Utils-PingServer" title="/v1/ping" data-group="show-api-Utils" data-name="show-api-Utils-PingServer" class="nav-list-item show-api api-Utils-PingServer-init">Ping server<div class="nav-list-url-item hide">/v1/ping</div></a>
+        </li><li class="is-new" data-group="Utils" data-name="StationsSearch" data-version="1.0.0">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#api-Utils-StationsSearch" title="/v1/stations/search" data-group="show-api-Utils" data-name="show-api-Utils-StationsSearch" class="nav-list-item show-api api-Utils-StationsSearch-init">Поиск станций метро по названию<div class="nav-list-url-item hide">/v1/stations/search</div></a>
+        </li></ul>
+</nav>
+</div>
+    <div id="content">
+      <div id="project">
+  <div class="pull-left">
+    <h1>Ez-scooter</h1>
+    
+  </div>
+  <div class="pull-right">
+    <div class="btn-group">
+      <button id="version" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
+        <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+      </button>
+      <ul id="versions" class="dropdown-menu open-left">
+        <li><a id="compareAllWithPredecessor" href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">Сравнить с предыдущей версией</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">показать версию:</a></li>
+        <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+      <div id="header"></div>
+      <div id="sections">
+  <section id="api-Courier" class="show-api-group show-api-Courier-group">
+    <h1>Courier</h1>
+      <div id="api-Courier-Login" class="show-api-article show-api-Courier-article show-api-Courier-Login-article ">
+        
+  <article id="api-Courier-Login-1.0.0" data-group="Courier" data-name="Login" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Courier - Логин курьера в системе</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__post">post</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">/api/v1/courier/login</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Параметр</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">Название</th>
+            <th style="width: 10%">Тип</th>
+            <th style="width: 60%">Описание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">login</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Логин курьера, хранится в поле <code>login</code> таблицы Couriers</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">password</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Пароль курьера, хэш от значения хранится в поле <code>passwordHash</code> таблицы Couriers</p>
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Courier-Login-1_0_0-0">Запрос</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="parameter-examples-Courier-Login-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pun">{</span><span class="pln">
+    </span><span class="str">"login"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"ninja"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"password"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"1234"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Courier-Login-1_0_0-0">Успешный логин</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Courier-Login-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    id</span><span class="pun">:</span><span class="pln"> </span><span class="lit">12345</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Courier-Login-1_0_0-0">Запрос без логина или пароля:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Courier-Login-1_0_0-1">Запрос c несуществующей парой логин-пароль:</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-Courier-Login-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">400</span><span class="pln"> </span><span class="typ">Bad</span><span class="pln"> </span><span class="typ">Request</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln">  </span><span class="str">"Недостаточно данных для входа"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Courier-Login-1_0_0-1">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Учетная запись не найдена"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+
+    
+
+  </article>
+
+      </div>
+      <div id="api-Courier-CreateCourier" class="show-api-article show-api-Courier-article show-api-Courier-CreateCourier-article ">
+        
+  <article id="api-Courier-CreateCourier-1.0.0" data-group="Courier" data-name="CreateCourier" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Courier - Создание курьера</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__post">post</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">/api/v1/courier</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Параметр</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">Название</th>
+            <th style="width: 10%">Тип</th>
+            <th style="width: 60%">Описание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">login</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Логин курьера, записывается в поле <code>login</code> таблицы Couriers</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">password</td>
+              <td>
+                number
+              </td>
+            <td>
+            <p>Пароль курьера, хэш от значения записывается в поле <code>passwordHash</code> таблицы Couriers</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">firstName <span class="label label-optional">необязательный</span></td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Имя курьера, записывается в поле  <code>firstName</code> таблицы Couriers</p>
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Courier-CreateCourier-1_0_0-0">Запрос</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="parameter-examples-Courier-CreateCourier-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pun">{</span><span class="pln">
+    </span><span class="str">"login"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"ninja"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"password"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"1234"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"firstName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"saske"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Courier-CreateCourier-1_0_0-0">Успешное создание учетной записи</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Courier-CreateCourier-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">201</span><span class="pln"> </span><span class="typ">Created</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    ok</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Courier-CreateCourier-1_0_0-0">Запрос без логина или пароля:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Courier-CreateCourier-1_0_0-1">Запрос с повторяющимся логином:</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-Courier-CreateCourier-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">400</span><span class="pln"> </span><span class="typ">Bad</span><span class="pln"> </span><span class="typ">Request</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Недостаточно данных для создания учетной записи"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Courier-CreateCourier-1_0_0-1">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">409</span><span class="pln"> </span><span class="pun">С</span><span class="pln">onflict
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Этот логин уже используется"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+
+    
+
+  </article>
+
+      </div>
+      <div id="api-Courier-DeleteCourier" class="show-api-article show-api-Courier-article show-api-Courier-DeleteCourier-article ">
+        
+  <article id="api-Courier-DeleteCourier-1.0.0" data-group="Courier" data-name="DeleteCourier" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Courier - Удаление курьера</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__delete">delete</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="delete" style=""><code><span class="pln">/api/v1/courier/:id</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Параметр</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">Название</th>
+            <th style="width: 10%">Тип</th>
+            <th style="width: 60%">Описание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">id</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Номер курьера, хранится в поле <code>id</code> таблицы Couriers</p>
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Courier-DeleteCourier-1_0_0-0">Успешное удаление курьера</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Courier-DeleteCourier-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+</span><span class="pun">{</span><span class="pln">
+    ok</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Courier-DeleteCourier-1_0_0-0">Запрос без id:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Courier-DeleteCourier-1_0_0-1">Запрос c несуществующим id:</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-Courier-DeleteCourier-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">400</span><span class="pln"> </span><span class="typ">Bad</span><span class="pln"> </span><span class="typ">Request</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln">  </span><span class="str">"Недостаточно данных для удаления курьера"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Courier-DeleteCourier-1_0_0-1">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Курьера с таким id нет"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+
+    
+
+  </article>
+
+      </div>
+  </section>
+
+  <section id="api-Couriers" class="show-api-group show-api-Couriers-group">
+    <h1>Couriers</h1>
+      <div id="api-Couriers-GetOrdersCountByCourierId" class="show-api-article show-api-Couriers-article show-api-Couriers-GetOrdersCountByCourierId-article ">
+        
+  <article id="api-Couriers-GetOrdersCountByCourierId-1.0.0" data-group="Couriers" data-name="GetOrdersCountByCourierId" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Couriers - Получить количество заказов курьера</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__get">get</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">/api/v1/courier/:id/ordersCount</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Параметр</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">Название</th>
+            <th style="width: 10%">Тип</th>
+            <th style="width: 60%">Описание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">id</td>
+              <td>
+                number
+              </td>
+            <td>
+            <p>Номер курьера { "id": 123456 }</p>
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Couriers-GetOrdersCountByCourierId-1_0_0-0">Количество заказов курьера "1"</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="parameter-examples-Couriers-GetOrdersCountByCourierId-1_0_0-0">
+        <pre class="prettyprint language-get prettyprinted" data-type="get" style=""><code><span class="str">/v1/</span><span class="pln">courier</span><span class="pun">/</span><span class="lit">1</span><span class="pun">/</span><span class="pln">ordersCount</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Couriers-GetOrdersCountByCourierId-1_0_0-0">Response success</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Couriers-GetOrdersCountByCourierId-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"123456"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"ordersCount"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"100500"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Couriers-GetOrdersCountByCourierId-1_0_0-0">Запрос без номера:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Couriers-GetOrdersCountByCourierId-1_0_0-1">Запрос c несуществующим номером:</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-Couriers-GetOrdersCountByCourierId-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">400</span><span class="pln"> </span><span class="typ">Bad</span><span class="pln"> </span><span class="typ">Request</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln">  </span><span class="str">"Недостаточно данных для поиска"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Couriers-GetOrdersCountByCourierId-1_0_0-1">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Курьер не найден"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+
+    
+
+  </article>
+
+      </div>
+  </section>
+
+  <section id="api-Orders" class="show-api-group show-api-Orders-group">
+    <h1>Orders</h1>
+      <div id="api-Orders-FinishOrder" class="show-api-article show-api-Orders-article show-api-Orders-FinishOrder-article ">
+        
+  <article id="api-Orders-FinishOrder-1.0.0" data-group="Orders" data-name="FinishOrder" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Orders - Завершить заказ</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__put">put</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="put" style=""><code><span class="pln">/api/v1/orders/finish/:id</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Параметр</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">Название</th>
+            <th style="width: 10%">Тип</th>
+            <th style="width: 60%">Описание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">id</td>
+              <td>
+                number
+              </td>
+            <td>
+            <p>Номер заказа, хранится в поле <code>id</code> таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Orders-FinishOrder-1_0_0-0">Запрос</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="parameter-examples-Orders-FinishOrder-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pun">{</span><span class="pln">
+    </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">123</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Orders-FinishOrder-1_0_0-0">Успешный ответ</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Orders-FinishOrder-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    ok</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-FinishOrder-1_0_0-0">Запрос без номера:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-FinishOrder-1_0_0-1">Запрос c несуществующим номером:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-FinishOrder-1_0_0-2">Запрос c несуществующим номер курьера:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-FinishOrder-1_0_0-3">Заказ нельзя завершить:</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-Orders-FinishOrder-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">400</span><span class="pln"> </span><span class="typ">Bad</span><span class="pln"> </span><span class="typ">Request</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln">  </span><span class="str">"Недостаточно данных для поиска"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Orders-FinishOrder-1_0_0-1">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Заказа с таким id не существует"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Orders-FinishOrder-1_0_0-2">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Курьера с таким id не существует"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Orders-FinishOrder-1_0_0-3">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">409</span><span class="pln"> </span><span class="typ">Conflict</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Этот заказ нельзя завершить"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+
+    
+
+  </article>
+
+      </div>
+      <div id="api-Orders-CancelOrder" class="show-api-article show-api-Orders-article show-api-Orders-CancelOrder-article ">
+        
+  <article id="api-Orders-CancelOrder-1.0.0" data-group="Orders" data-name="CancelOrder" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Orders - Отменить заказ</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__put">put</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="put" style=""><code><span class="pln">/api/v1/orders/cancel</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Параметр</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">Название</th>
+            <th style="width: 10%">Тип</th>
+            <th style="width: 60%">Описание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">track</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Номер заказа, хранится в поле <code>track</code> таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Orders-CancelOrder-1_0_0-0">Запрос</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="parameter-examples-Orders-CancelOrder-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pun">{</span><span class="pln">
+    </span><span class="str">"track"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">123456</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Orders-CancelOrder-1_0_0-0">Успешный ответ</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Orders-CancelOrder-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    ok</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-CancelOrder-1_0_0-0">Запрос без номера:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-CancelOrder-1_0_0-1">Запрос c несуществующим номером:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-CancelOrder-1_0_0-2">Заказ уже в работе:</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-Orders-CancelOrder-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">400</span><span class="pln"> </span><span class="typ">Bad</span><span class="pln"> </span><span class="typ">Request</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln">  </span><span class="str">"Недостаточно данных для поиска"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Orders-CancelOrder-1_0_0-1">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Заказ не найден"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Orders-CancelOrder-1_0_0-2">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">409</span><span class="pln"> </span><span class="typ">Conflict</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Этот заказ уже в работе"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+
+    
+
+  </article>
+
+      </div>
+      <div id="api-Orders-GetOrdersPageByPage" class="show-api-article show-api-Orders-article show-api-Orders-GetOrdersPageByPage-article ">
+        
+  <article id="api-Orders-GetOrdersPageByPage-1.0.0" data-group="Orders" data-name="GetOrdersPageByPage" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Orders - Получение списка заказов.</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__get">get</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">/api/v1/orders</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Параметр</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">Название</th>
+            <th style="width: 10%">Тип</th>
+            <th style="width: 60%">Описание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">courierId <span class="label label-optional">необязательный</span></td>
+              <td>
+                number
+              </td>
+            <td>
+            <p>Идентификатор курьера. Если указан - возвращает все активные и завершенные заказы этого курьера</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">nearestStation <span class="label label-optional">необязательный</span></td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Фильтр станций метро. Передается в виде JSON, например: <code>{ nearestStation: ["1", "2"] }</code>. При передаче, финальная выдача фильтруется по указанным станциям метро</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">limit <span class="label label-optional">необязательный</span></td>
+              <td>
+                number
+              </td>
+            <td>
+            <p>Количество заказов на странице. <code>Максимум: 30</code></p>
+            <p class="default-value">По умолчанию: <code>30</code></p>
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">page <span class="label label-optional">необязательный</span></td>
+              <td>
+                number
+              </td>
+            <td>
+            <p>Текущая страница показа заказов.</p>
+            <p class="default-value">По умолчанию: <code>0</code></p>
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Orders-GetOrdersPageByPage-1_0_0-0">Все активные/завершенные заказы курьера</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Orders-GetOrdersPageByPage-1_0_0-1">Все активные/завершенные заказы курьера на станциях "Бульвар Рокоссовского"(1) или "Черкизовская"(2)</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Orders-GetOrdersPageByPage-1_0_0-2">10 заказов, доступных для взятия курьером</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Orders-GetOrdersPageByPage-1_0_0-3">10 заказов, доступных для взятия курьером возле метро "Калужская"(110)</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="parameter-examples-Orders-GetOrdersPageByPage-1_0_0-0">
+        <pre class="prettyprint language-get prettyprinted" data-type="get" style=""><code><span class="str">/v1/</span><span class="pln">orders</span><span class="pun">?</span><span class="pln">courierId</span><span class="pun">=</span><span class="lit">1</span></code></pre>
+        </div>
+        <div class="tab-pane" id="parameter-examples-Orders-GetOrdersPageByPage-1_0_0-1">
+        <pre class="prettyprint language-get prettyprinted" data-type="get" style=""><code><span class="str">/v1/</span><span class="pln">orders</span><span class="pun">?</span><span class="pln">courierId</span><span class="pun">=</span><span class="lit">1</span><span class="pun">&amp;</span><span class="pln">nearestStation</span><span class="pun">=[</span><span class="str">"1"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">]</span></code></pre>
+        </div>
+        <div class="tab-pane" id="parameter-examples-Orders-GetOrdersPageByPage-1_0_0-2">
+        <pre class="prettyprint language-get prettyprinted" data-type="get" style=""><code><span class="str">/v1/</span><span class="pln">orders</span><span class="pun">?</span><span class="pln">limit</span><span class="pun">=</span><span class="lit">10</span><span class="pun">&amp;</span><span class="pln">page</span><span class="pun">=</span><span class="lit">0</span></code></pre>
+        </div>
+        <div class="tab-pane" id="parameter-examples-Orders-GetOrdersPageByPage-1_0_0-3">
+        <pre class="prettyprint language-get prettyprinted" data-type="get" style=""><code><span class="str">/v1/</span><span class="pln">orders</span><span class="pun">?</span><span class="pln">limit</span><span class="pun">=</span><span class="lit">10</span><span class="pun">&amp;</span><span class="pln">page</span><span class="pun">=</span><span class="lit">0</span><span class="pun">&amp;</span><span class="pln">nearestStation</span><span class="pun">=[</span><span class="str">"110"</span><span class="pun">]</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Orders-GetOrdersPageByPage-1_0_0-0">Успешный запрос без courierId</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Orders-GetOrdersPageByPage-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln">
+ </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">"orders"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"courierId"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"firstName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"ваыпывп"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"lastName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"ывпывп"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"address"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"пывпывп"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"metroStation"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"phone"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"423424234432"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"rentTime"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"deliveryDate"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2020-06-21T21:00:00.000Z"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"track"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">400443</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"color"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="str">"BLACK"</span><span class="pun">,</span><span class="pln">
+                </span><span class="str">"GREY"</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"comment"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"ываимм"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"createdAt"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2020-06-21T13:21:30.067Z"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"updatedAt"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2020-06-21T13:21:30.067Z"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"courierId"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"firstName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"вфцфвц"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"lastName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"вфцвфцв"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"address"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"вфцвфцвфц"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"metroStation"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"4"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"phone"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"1441412414"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"rentTime"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"deliveryDate"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2020-06-08T21:00:00.000Z"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"track"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">189237</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"color"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="str">"BLACK"</span><span class="pun">,</span><span class="pln">
+                </span><span class="str">"GREY"</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"comment"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"вфцвфцвфцв"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"createdAt"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2020-06-21T13:23:09.404Z"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"updatedAt"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2020-06-21T13:23:09.404Z"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">],</span><span class="pln">
+    </span><span class="str">"pageInfo"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">"page"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"total"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"limit"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="str">"availableStations"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Черкизовская"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"number"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"color"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"#D92B2C"</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Преображенская площадь"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"number"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"3"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"color"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"#D92B2C"</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Сокольники"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"number"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"4"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"color"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"#D92B2C"</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">]</span><span class="pln">
+ </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-GetOrdersPageByPage-1_0_0-0">Запрос c несуществующим id:</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-Orders-GetOrdersPageByPage-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Курьер с идентификатором {courierId} не найден"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+
+    
+
+  </article>
+
+      </div>
+      <div id="api-Orders-GetOrderByTrackNumber" class="show-api-article show-api-Orders-article show-api-Orders-GetOrderByTrackNumber-article ">
+        
+  <article id="api-Orders-GetOrderByTrackNumber-1.0.0" data-group="Orders" data-name="GetOrderByTrackNumber" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Orders - Получить заказ по его номеру</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__get">get</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">/api/v1/orders/track</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Параметр</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">Название</th>
+            <th style="width: 10%">Тип</th>
+            <th style="width: 60%">Описание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">t</td>
+              <td>
+                number
+              </td>
+            <td>
+            <p>Трекинговый номер заказа</p>
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Orders-GetOrderByTrackNumber-1_0_0-0">Запрос</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="parameter-examples-Orders-GetOrderByTrackNumber-1_0_0-0">
+        <pre class="prettyprint language-get prettyprinted" data-type="get" style=""><code><span class="str">/v1/</span><span class="pln">orders</span><span class="pun">/</span><span class="pln">track</span><span class="pun">?</span><span class="pln">t</span><span class="pun">=</span><span class="lit">123456</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Orders-GetOrderByTrackNumber-1_0_0-0">Response success</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Orders-GetOrderByTrackNumber-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+         </span><span class="str">"order"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+             </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"firstName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Naruto"</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"lastName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Uzumaki"</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"address"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Kanoha, 142 apt."</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"metroStation"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"1"</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"phone"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"+7 800 355 35 35"</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"rentTime"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"deliveryDate"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2020-06-06T00:00:00.000Z"</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"track"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">521394</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"color"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                 </span><span class="str">"BLACK"</span><span class="pln">
+             </span><span class="pun">],</span><span class="pln">
+             </span><span class="str">"comment"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Saske, come back to Kanoha"</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"cancelled"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"finished"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"inDelivery"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"courierFirstName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Kaneki"</span><span class="pln">
+             </span><span class="str">"createdAt"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2020-06-08T14:40:28.219Z"</span><span class="pun">,</span><span class="pln">
+             </span><span class="str">"updatedAt"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2020-06-08T14:40:28.219Z"</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-GetOrderByTrackNumber-1_0_0-0">Запрос без номера:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-GetOrderByTrackNumber-1_0_0-1">Запрос c несуществующим номером:</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-Orders-GetOrderByTrackNumber-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">400</span><span class="pln"> </span><span class="typ">Bad</span><span class="pln"> </span><span class="typ">Request</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln">  </span><span class="str">"Недостаточно данных для поиска"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Orders-GetOrderByTrackNumber-1_0_0-1">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Заказ не найден"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+
+    
+
+  </article>
+
+      </div>
+      <div id="api-Orders-AcceptOrder" class="show-api-article show-api-Orders-article show-api-Orders-AcceptOrder-article ">
+        
+  <article id="api-Orders-AcceptOrder-1.0.0" data-group="Orders" data-name="AcceptOrder" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Orders - Принять заказ</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__put">put</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="put" style=""><code><span class="pln">/api/v1/orders/accept/:id</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Параметр</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">Название</th>
+            <th style="width: 10%">Тип</th>
+            <th style="width: 60%">Описание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">id</td>
+              <td>
+                number
+              </td>
+            <td>
+            <p>Номер заказа, хранится в поле <code>id</code> таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">courierId</td>
+              <td>
+                number
+              </td>
+            <td>
+            <p>Id курьера, хранится в поле <code>id</code> таблицы Couriers</p>
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Orders-AcceptOrder-1_0_0-0">Запрос</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="parameter-examples-Orders-AcceptOrder-1_0_0-0">
+        <pre class="prettyprint language-query prettyprinted" data-type="query" style=""><code><span class="str">/v1/</span><span class="pln">orders</span><span class="pun">/</span><span class="pln">accept</span><span class="pun">/</span><span class="lit">1</span><span class="pun">?</span><span class="pln">courierId</span><span class="pun">=</span><span class="lit">213</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Orders-AcceptOrder-1_0_0-0">Успешный ответ</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Orders-AcceptOrder-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    ok</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-AcceptOrder-1_0_0-0">Запрос без номера:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-AcceptOrder-1_0_0-1">Запрос c несуществующим номером:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-AcceptOrder-1_0_0-2">Запрос c несуществующим номер курьера:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-AcceptOrder-1_0_0-3">Заказ уже был в работе:</a>
+        </li>
+        <li>
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#error-examples-Orders-AcceptOrder-1_0_0-4">Нет id курьера или id заказа:</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-Orders-AcceptOrder-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">400</span><span class="pln"> </span><span class="typ">Bad</span><span class="pln"> </span><span class="typ">Request</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln">  </span><span class="str">"Недостаточно данных для поиска"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Orders-AcceptOrder-1_0_0-1">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Заказа с таким id не существует"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Orders-AcceptOrder-1_0_0-2">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Курьера с таким id не существует"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Orders-AcceptOrder-1_0_0-3">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">409</span><span class="pln"> </span><span class="typ">Conflict</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Этот заказ уже в работе"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+        <div class="tab-pane" id="error-examples-Orders-AcceptOrder-1_0_0-4">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">400</span><span class="pln"> </span><span class="typ">Conflict</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"message"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Недостаточно данных для поиска"</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+
+    
+
+  </article>
+
+      </div>
+      <div id="api-Orders-CreateOrder" class="show-api-article show-api-Orders-article show-api-Orders-CreateOrder-article ">
+        
+  <article id="api-Orders-CreateOrder-1.0.0" data-group="Orders" data-name="CreateOrder" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Orders - Создание заказа</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__post">post</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">/api/v1/orders</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Параметр</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">Название</th>
+            <th style="width: 10%">Тип</th>
+            <th style="width: 60%">Описание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">firstName</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Имя заказчика, записывается  в поле <code>firstName</code>  таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">lastName</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Фамилия заказчика, записывается в поле <code>lastName</code> таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">address</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Адрес заказчика, записывается в поле <code>adress</code> таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">metroStation</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Ближайшая к заказчику станция метро, записывается в поле <code>metroStation</code> таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">phone</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Телефон заказчика, записывается в поле <code>phone</code> таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">rentTime</td>
+              <td>
+                number
+              </td>
+            <td>
+            <p>Количество дней аренды, записывается в поле <code>rentTime</code> таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">deliveryDate</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Дата доставки, записывается в поле <code>deliveryDate</code> таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">comment</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Комментарий от заказчика, записывается в поле <code>comment</code> таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+          <tr>
+            <td class="code">color <span class="label label-optional">необязательный</span></td>
+              <td>
+                string[]
+              </td>
+            <td>
+            <p>Предпочитаемые цвета, записываются в поле <code>color</code> таблицы Orders</p>
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Orders-CreateOrder-1_0_0-0">Запрос</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="parameter-examples-Orders-CreateOrder-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pun">{</span><span class="pln">
+    </span><span class="str">"firstName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Naruto"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"lastName"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Uchiha"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"address"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Konoha, 142 apt."</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"metroStation"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"phone"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"+7 800 355 35 35"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"rentTime"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"deliveryDate"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2020-06-06"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"comment"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Saske, come back to Konoha"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"color"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="str">"BLACK"</span><span class="pln">
+    </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Orders-CreateOrder-1_0_0-0">Успешное создание заказа</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Orders-CreateOrder-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">201</span><span class="pln"> </span><span class="typ">Created</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    track</span><span class="pun">:</span><span class="pln"> </span><span class="lit">124124</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+    
+
+
+    
+
+  </article>
+
+      </div>
+  </section>
+
+  <section id="api-Utils" class="show-api-group show-api-Utils-group">
+    <h1>Utils</h1>
+      <div id="api-Utils-PingServer" class="show-api-article show-api-Utils-article show-api-Utils-PingServer-article ">
+        
+  <article id="api-Utils-PingServer-1.0.0" data-group="Utils" data-name="PingServer" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Utils - Ping server</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__get">get</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">/api/v1/ping</span></code></pre>
+
+
+
+    
+
+    
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Utils-PingServer-1_0_0-0">Response success</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Utils-PingServer-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> </span><span class="typ">Ok</span><span class="pln">
+pong</span><span class="pun">;</span></code></pre>
+        </div>
+      </div>
+
+    
+
+
+    
+
+  </article>
+
+      </div>
+      <div id="api-Utils-StationsSearch" class="show-api-article show-api-Utils-article show-api-Utils-StationsSearch-article ">
+        
+  <article id="api-Utils-StationsSearch-1.0.0" data-group="Utils" data-name="StationsSearch" data-version="1.0.0" class="">
+    <div class="pull-left">
+      <h1>Utils - Поиск станций метро по названию</h1>
+    </div>
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="version btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <strong>1.0.0</strong>&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="versions dropdown-menu open-left">
+          <li class="disabled"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">сравнить с:</a></li>
+          <li class="version"><a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#">1.0.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    
+
+
+    <span class="type type__get">get</span>
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">/api/v1/stations/search</span></code></pre>
+
+
+
+    
+
+    
+      <h2>Параметр</h2>
+      <table>
+        <thead>
+          <tr>
+          <th style="width: 30%">Название</th>
+            <th style="width: 10%">Тип</th>
+            <th style="width: 60%">Описание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">s</td>
+              <td>
+                string
+              </td>
+            <td>
+            <p>Строка для поиска станции</p>
+            
+            
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#parameter-examples-Utils-StationsSearch-1_0_0-0">Поиск метро "Сокол"</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="parameter-examples-Utils-StationsSearch-1_0_0-0">
+        <pre class="prettyprint language-get prettyprinted" data-type="get" style=""><code><span class="str">/v1/</span><span class="pln">stations</span><span class="pun">/</span><span class="pln">search</span><span class="pun">?</span><span class="pln">s</span><span class="pun">=Сокол</span></code></pre>
+        </div>
+      </div>
+
+    
+      <ul class="nav nav-tabs nav-tabs-examples">
+        <li class="active">
+          <a href="https://7046e53e-1915-49b4-832e-2d5ec1c72744.serverhub.praktikum-services.ru/docs/#success-examples-Utils-StationsSearch-1_0_0-0">Успешный поиск</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-Utils-StationsSearch-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">   HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+  </span><span class="pun">[</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+       </span><span class="str">"number"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"4"</span><span class="pun">,</span><span class="pln">
+       </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Сокольники"</span><span class="pun">,</span><span class="pln">
+       </span><span class="str">"color"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"#D92B2C"</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+       </span><span class="str">"number"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"26"</span><span class="pun">,</span><span class="pln">
+       </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Сокол"</span><span class="pun">,</span><span class="pln">
+       </span><span class="str">"color"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"#4DBE52"</span><span class="pln">
+   </span><span class="pun">},</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"number"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"215"</span><span class="pun">,</span><span class="pln">
+      </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Соколиная Гора"</span><span class="pun">,</span><span class="pln">
+      </span><span class="str">"color"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"#efadb5"</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">]</span></code></pre>
+        </div>
+      </div>
+
+    
+
+
+    
+
+  </article>
+
+      </div>
+  </section>
+</div>
+      <div id="footer"></div>
+      <div id="generator">
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+<script data-main="main.js" src="./Документация API_files/require.min.js.Без названия"></script>
+
+
+</body></html>

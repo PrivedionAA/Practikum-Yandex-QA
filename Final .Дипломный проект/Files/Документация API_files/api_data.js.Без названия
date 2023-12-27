@@ -1,0 +1,716 @@
+define({ "api": [
+  {
+    "type": "POST",
+    "url": "/v1/courier",
+    "title": "Создание курьера",
+    "version": "1.0.0",
+    "name": "CreateCourier",
+    "group": "Courier",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "login",
+            "description": "<p>Логин курьера, записывается в поле <code>login</code> таблицы Couriers</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Пароль курьера, хэш от значения записывается в поле <code>passwordHash</code> таблицы Couriers</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": true,
+            "field": "firstName",
+            "description": "<p>Имя курьера, записывается в поле  <code>firstName</code> таблицы Couriers</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Запрос",
+          "content": "{\n  \"login\": \"ninja\",\n  \"password\": \"1234\",\n  \"firstName\" : \"saske\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Успешное создание учетной записи",
+          "content": "HTTP/1.1 201 Created\n{\n    ok: true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Запрос без логина или пароля:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n  \"message\": \"Недостаточно данных для создания учетной записи\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Запрос с повторяющимся логином:",
+          "content": "HTTP/1.1 409 Сonflict\n{\n  \"message\": \"Этот логин уже используется\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/couriers/controllers/create-courier.js",
+    "groupTitle": "Courier"
+  },
+  {
+    "type": "DELETE",
+    "url": "/v1/courier/:id",
+    "title": "Удаление курьера",
+    "version": "1.0.0",
+    "name": "DeleteCourier",
+    "group": "Courier",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Номер курьера, хранится в поле <code>id</code> таблицы Couriers</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Успешное удаление курьера",
+          "content": "HTTP/1.1 200 OK\n{\n    ok: true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Запрос без id:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n  \"message\":  \"Недостаточно данных для удаления курьера\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Запрос c несуществующим id:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"message\": \"Курьера с таким id нет\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/couriers/controllers/delete-courier.js",
+    "groupTitle": "Courier"
+  },
+  {
+    "type": "POST",
+    "url": "/v1/courier/login",
+    "title": "Логин курьера в системе",
+    "version": "1.0.0",
+    "name": "Login",
+    "group": "Courier",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "login",
+            "description": "<p>Логин курьера, хранится в поле <code>login</code> таблицы Couriers</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Пароль курьера, хэш от значения хранится в поле <code>passwordHash</code> таблицы Couriers</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Запрос",
+          "content": "{\n  \"login\": \"ninja\",\n  \"password\": \"1234\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Успешный логин",
+          "content": "HTTP/1.1 200\n{\n    id: 12345\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Запрос без логина или пароля:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n  \"message\":  \"Недостаточно данных для входа\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Запрос c несуществующей парой логин-пароль:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"message\": \"Учетная запись не найдена\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/couriers/controllers/login.js",
+    "groupTitle": "Courier"
+  },
+  {
+    "type": "GET",
+    "url": "/v1/courier/:id/ordersCount",
+    "title": "Получить количество заказов курьера",
+    "version": "1.0.0",
+    "name": "GetOrdersCountByCourierId",
+    "group": "Couriers",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Количество заказов курьера \"1\"",
+          "content": "/v1/courier/1/ordersCount",
+          "type": "get"
+        }
+      ],
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Номер курьера { &quot;id&quot;: 123456 }</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Response success",
+          "content": "HTTP/1.1 200\n{\n  \"id\": \"123456\",\n  \"ordersCount\": \"100500\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Запрос без номера:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n  \"message\":  \"Недостаточно данных для поиска\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Запрос c несуществующим номером:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"message\": \"Курьер не найден\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/couriers/controllers/get-orders-count.js",
+    "groupTitle": "Couriers"
+  },
+  {
+    "type": "PUT",
+    "url": "/v1/orders/accept/:id",
+    "title": "Принять заказ",
+    "version": "1.0.0",
+    "name": "AcceptOrder",
+    "group": "Orders",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Номер заказа, хранится в поле <code>id</code> таблицы Orders</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "courierId",
+            "description": "<p>Id курьера, хранится в поле <code>id</code> таблицы Couriers</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Запрос",
+          "content": "/v1/orders/accept/1?courierId=213",
+          "type": "query"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Успешный ответ",
+          "content": "HTTP/1.1 200\n{\n    ok: true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Запрос без номера:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n  \"message\":  \"Недостаточно данных для поиска\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Запрос c несуществующим номером:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"message\": \"Заказа с таким id не существует\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Запрос c несуществующим номер курьера:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"message\": \"Курьера с таким id не существует\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Заказ уже был в работе:",
+          "content": "HTTP/1.1 409 Conflict\n{\n  \"message\": \"Этот заказ уже в работе\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Нет id курьера или id заказа:",
+          "content": "HTTP/1.1 400 Conflict\n{\n  \"message\": \"Недостаточно данных для поиска\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/orders/controllers/accept-order.js",
+    "groupTitle": "Orders"
+  },
+  {
+    "type": "PUT",
+    "url": "/v1/orders/cancel",
+    "title": "Отменить заказ",
+    "version": "1.0.0",
+    "name": "CancelOrder",
+    "group": "Orders",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "track",
+            "description": "<p>Номер заказа, хранится в поле <code>track</code> таблицы Orders</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Запрос",
+          "content": "{\n  \"track\": 123456\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Успешный ответ",
+          "content": "HTTP/1.1 200\n{\n    ok: true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Запрос без номера:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n  \"message\":  \"Недостаточно данных для поиска\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Запрос c несуществующим номером:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"message\": \"Заказ не найден\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Заказ уже в работе:",
+          "content": "HTTP/1.1 409 Conflict\n{\n  \"message\": \"Этот заказ уже в работе\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/orders/controllers/cancel-order-by-track.js",
+    "groupTitle": "Orders"
+  },
+  {
+    "type": "POST",
+    "url": "/v1/orders",
+    "title": "Создание заказа",
+    "version": "1.0.0",
+    "name": "CreateOrder",
+    "group": "Orders",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "firstName",
+            "description": "<p>Имя заказчика, записывается  в поле <code>firstName</code>  таблицы Orders</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "lastName",
+            "description": "<p>Фамилия заказчика, записывается в поле <code>lastName</code> таблицы Orders</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "address",
+            "description": "<p>Адрес заказчика, записывается в поле <code>adress</code> таблицы Orders</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "metroStation",
+            "description": "<p>Ближайшая к заказчику станция метро, записывается в поле <code>metroStation</code> таблицы Orders</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "phone",
+            "description": "<p>Телефон заказчика, записывается в поле <code>phone</code> таблицы Orders</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "rentTime",
+            "description": "<p>Количество дней аренды, записывается в поле <code>rentTime</code> таблицы Orders</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "deliveryDate",
+            "description": "<p>Дата доставки, записывается в поле <code>deliveryDate</code> таблицы Orders</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "comment",
+            "description": "<p>Комментарий от заказчика, записывается в поле <code>comment</code> таблицы Orders</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string[]",
+            "optional": true,
+            "field": "color",
+            "description": "<p>Предпочитаемые цвета, записываются в поле <code>color</code> таблицы Orders</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Запрос",
+          "content": "  {\n\t   \"firstName\":\"Naruto\",\n\t   \"lastName\": \"Uchiha\",\n\t   \"address\": \"Konoha, 142 apt.\",\n\t   \"metroStation\": 4,\n\t   \"phone\": \"+7 800 355 35 35\",\n\t   \"rentTime\": 5,\n\t   \"deliveryDate\": \"2020-06-06\",\n\t   \"comment\": \"Saske, come back to Konoha\",\n\t   \"color\": [\n\t\t   \"BLACK\"\n\t   ]\n  }",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Успешное создание заказа",
+          "content": "HTTP/1.1 201 Created {\n    track: 124124\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/orders/controllers/create-order.js",
+    "groupTitle": "Orders"
+  },
+  {
+    "type": "PUT",
+    "url": "/v1/orders/finish/:id",
+    "title": "Завершить заказ",
+    "version": "1.0.0",
+    "name": "FinishOrder",
+    "group": "Orders",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Номер заказа, хранится в поле <code>id</code> таблицы Orders</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Запрос",
+          "content": "{\n    \"id\": 123\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Успешный ответ",
+          "content": "HTTP/1.1 200\n{\n    ok: true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Запрос без номера:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n  \"message\":  \"Недостаточно данных для поиска\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Запрос c несуществующим номером:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"message\": \"Заказа с таким id не существует\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Запрос c несуществующим номер курьера:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"message\": \"Курьера с таким id не существует\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Заказ нельзя завершить:",
+          "content": "HTTP/1.1 409 Conflict\n{\n  \"message\": \"Этот заказ нельзя завершить\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/orders/controllers/finish-order.js",
+    "groupTitle": "Orders"
+  },
+  {
+    "type": "GET",
+    "url": "/v1/orders/track",
+    "title": "Получить заказ по его номеру",
+    "version": "1.0.0",
+    "name": "GetOrderByTrackNumber",
+    "group": "Orders",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "t",
+            "description": "<p>Трекинговый номер заказа</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Запрос",
+          "content": "/v1/orders/track?t=123456",
+          "type": "get"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Response success",
+          "content": "    HTTP/1.1 200\n    {\n         \"order\": {\n             \"id\": 2,\n             \"firstName\": \"Naruto\",\n             \"lastName\": \"Uzumaki\",\n             \"address\": \"Kanoha, 142 apt.\",\n             \"metroStation\": \"1\",\n             \"phone\": \"+7 800 355 35 35\",\n             \"rentTime\": 5,\n             \"deliveryDate\": \"2020-06-06T00:00:00.000Z\",\n             \"track\": 521394,\n             \"status\": 1,\n             \"color\": [\n                 \"BLACK\"\n             ],\n             \"comment\": \"Saske, come back to Kanoha\",\n             \"cancelled\": false,\n             \"finished\": false,\n             \"inDelivery\": false,\n             \"courierFirstName\": \"Kaneki\"\n             \"createdAt\": \"2020-06-08T14:40:28.219Z\",\n             \"updatedAt\": \"2020-06-08T14:40:28.219Z\"\n  }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Запрос без номера:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n  \"message\":  \"Недостаточно данных для поиска\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Запрос c несуществующим номером:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"message\": \"Заказ не найден\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/orders/controllers/get-order-by-track-number.js",
+    "groupTitle": "Orders"
+  },
+  {
+    "type": "GET",
+    "url": "/v1/orders",
+    "title": "Получение списка заказов.",
+    "version": "1.0.0",
+    "name": "GetOrdersPageByPage",
+    "group": "Orders",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": true,
+            "field": "courierId",
+            "description": "<p>Идентификатор курьера. Если указан - возвращает все активные и завершенные заказы этого курьера</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": true,
+            "field": "nearestStation",
+            "description": "<p>Фильтр станций метро. Передается в виде JSON, например: <code>{ nearestStation: [&quot;1&quot;, &quot;2&quot;] }</code>. При передаче, финальная выдача фильтруется по указанным станциям метро</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": true,
+            "field": "limit",
+            "defaultValue": "30",
+            "description": "<p>Количество заказов на странице. <code>Максимум: 30</code></p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": true,
+            "field": "page",
+            "defaultValue": "0",
+            "description": "<p>Текущая страница показа заказов.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Все активные/завершенные заказы курьера",
+          "content": "/v1/orders?courierId=1",
+          "type": "get"
+        },
+        {
+          "title": "Все активные/завершенные заказы курьера на станциях \"Бульвар Рокоссовского\"(1) или \"Черкизовская\"(2)",
+          "content": "/v1/orders?courierId=1&nearestStation=[\"1\", \"2\"]",
+          "type": "get"
+        },
+        {
+          "title": "10 заказов, доступных для взятия курьером",
+          "content": "/v1/orders?limit=10&page=0",
+          "type": "get"
+        },
+        {
+          "title": "10 заказов, доступных для взятия курьером возле метро \"Калужская\"(110)",
+          "content": "/v1/orders?limit=10&page=0&nearestStation=[\"110\"]",
+          "type": "get"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Запрос c несуществующим id:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"message\": \"Курьер с идентификатором {courierId} не найден\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Успешный запрос без courierId",
+          "content": "HTTP/1.1 200\n {\n    \"orders\": [\n        {\n            \"id\": 4,\n            \"courierId\": null,\n            \"firstName\": \"ваыпывп\",\n            \"lastName\": \"ывпывп\",\n            \"address\": \"пывпывп\",\n            \"metroStation\": \"2\",\n            \"phone\": \"423424234432\",\n            \"rentTime\": 4,\n            \"deliveryDate\": \"2020-06-21T21:00:00.000Z\",\n            \"track\": 400443,\n            \"color\": [\n                \"BLACK\",\n                \"GREY\"\n            ],\n            \"comment\": \"ываимм\",\n            \"createdAt\": \"2020-06-21T13:21:30.067Z\",\n            \"updatedAt\": \"2020-06-21T13:21:30.067Z\",\n            \"status\": 0\n        },\n        {\n            \"id\": 5,\n            \"courierId\": null,\n            \"firstName\": \"вфцфвц\",\n            \"lastName\": \"вфцвфцв\",\n            \"address\": \"вфцвфцвфц\",\n            \"metroStation\": \"4\",\n            \"phone\": \"1441412414\",\n            \"rentTime\": 4,\n            \"deliveryDate\": \"2020-06-08T21:00:00.000Z\",\n            \"track\": 189237,\n            \"color\": [\n                \"BLACK\",\n                \"GREY\"\n            ],\n            \"comment\": \"вфцвфцвфцв\",\n            \"createdAt\": \"2020-06-21T13:23:09.404Z\",\n            \"updatedAt\": \"2020-06-21T13:23:09.404Z\",\n            \"status\": 0\n        }\n    ],\n    \"pageInfo\": {\n        \"page\": 0,\n        \"total\": 3,\n        \"limit\": 2\n    },\n    \"availableStations\": [\n        {\n            \"name\": \"Черкизовская\",\n            \"number\": \"2\",\n            \"color\": \"#D92B2C\"\n        },\n        {\n            \"name\": \"Преображенская площадь\",\n            \"number\": \"3\",\n            \"color\": \"#D92B2C\"\n        },\n        {\n            \"name\": \"Сокольники\",\n            \"number\": \"4\",\n            \"color\": \"#D92B2C\"\n        }\n    ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/orders/controllers/get-list-of-orders.js",
+    "groupTitle": "Orders"
+  },
+  {
+    "type": "GET",
+    "url": "/v1/ping",
+    "title": "Ping server",
+    "version": "1.0.0",
+    "name": "PingServer",
+    "group": "Utils",
+    "success": {
+      "examples": [
+        {
+          "title": "Response success",
+          "content": "HTTP/1.1 200 Ok\npong;",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/ping/controllers/ping.js",
+    "groupTitle": "Utils"
+  },
+  {
+    "type": "GET",
+    "url": "/v1/stations/search",
+    "title": "Поиск станций метро по названию",
+    "version": "1.0.0",
+    "name": "StationsSearch",
+    "group": "Utils",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "s",
+            "description": "<p>Строка для поиска станции</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Поиск метро \"Сокол\"",
+          "content": "/v1/stations/search?s=Сокол",
+          "type": "get"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Успешный поиск",
+          "content": "   HTTP/1.1 200 OK\n  [\n    {\n       \"number\": \"4\",\n       \"name\": \"Сокольники\",\n       \"color\": \"#D92B2C\"\n    },\n    {\n       \"number\": \"26\",\n       \"name\": \"Сокол\",\n       \"color\": \"#4DBE52\"\n   },\n   {\n      \"number\": \"215\",\n      \"name\": \"Соколиная Гора\",\n      \"color\": \"#efadb5\"\n   }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/api/v1/metro/controllers/search.js",
+    "groupTitle": "Utils"
+  }
+] });
