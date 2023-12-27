@@ -17,7 +17,7 @@ Sprint 2. Тестирование веб-приложений.
 •	Тестирование веб-приложений
 •	Кроссбраузерное тестирование
 Практическая работа расположена в Sprint 2.
-Ссылка на трекер: [Sprint 2]( тег: {Sprint 2} | 48 задач | – JetBrains YouTrack)
+Ссылка на трекер: [Sprint 2](https://privedionaa.youtrack.cloud/issues?u=1&q=%D1%82%D0%B5%D0%B3:%20%7BSprint%202%7D)
 Sprint 3. Тестирование мобильных приложений и API
 •	Android Studio
 •	Анализ логов
@@ -29,7 +29,7 @@ Sprint 3. Тестирование мобильных приложений и AP
 •	Xml и Xsd
 •	Тестирование API
 Практическая работа расположена в Sprint 3.
-Ссылка на трекер: [Sprint 3]( тег: {Sprint 3} | Все - JetBrains YouTrack)
+Ссылка на трекер: [Sprint 3](https://privedionaa.youtrack.cloud/issues?u=1&q=%D1%82%D0%B5%D0%B3:%20%7BSprint%203%7D)
 Sprint 4. Основы баз данных
 •	Базы данных
 •	ER-диаграммы
@@ -40,6 +40,6 @@ Sprint 4. Основы баз данных
 Практическая работа расположена в Sprint 4.
 Final. Дипломный проект 
 Практическая работа расположена в Final.
-Ссылка на трекер: [Final]( тег: Диплом | Все - JetBrains YouTrack)
+Ссылка на трекер: [Final](https://privedionaa.youtrack.cloud/issues?u=1&q=%D1%82%D0%B5%D0%B3:%20%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC)
 
 
